@@ -1,0 +1,50 @@
+.header-container{
+    width: 100vw;
+    height: 8vh;
+    background-color: rgb(25, 108, 80);
+    position: fixed;
+    top: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.logo{
+    float: left;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    font-size:25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    color: white;
+    cursor: pointer;
+    text-shadow: 5px 2px 5px black;
+}
+
+.logo:hover{
+    color: rgb(30, 28, 28);  
+    text-shadow: 5px 2px 5px rgb(132, 132, 132);
+}
+
+.menu{
+    float: right;
+    margin-top: 2.8vh;
+    text-decoration: none;
+}
+
+.menu button{
+    float: right;
+    background-color: transparent;
+    border: transparent;
+    font-size: large;
+    /* padding-top: 3vh; */
+    margin-right: 3vw;
+    cursor: pointer;
+    padding-bottom: 2.3vh;
+}
+
+.menu button:hover{
+    color: white;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+

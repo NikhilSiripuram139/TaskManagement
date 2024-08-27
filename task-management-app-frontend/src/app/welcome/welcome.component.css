@@ -1,0 +1,35 @@
+.welcome-container{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 85vh;
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    /* z-index: 20px; */
+    color: white;
+    /* background-color: #fff; */
+}
+
+.welcome-container h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 5px 2px 5px black;
+    cursor: pointer;
+    color: rgb(25, 108, 80);
+}
+
+.welcome-container p{
+    font-size:x-large;
+    color: white;
+    font-weight: bold;
+    margin-right: 0.7vw;
+}
+
+.welcome-container h1:hover{
+    color: rgb(25, 108, 80);  
+    /* color: rgb(30, 28, 28);   */
+    text-shadow: 5px 2px 5px rgb(76, 73, 73);
+    transform: scale(1.2);
+}

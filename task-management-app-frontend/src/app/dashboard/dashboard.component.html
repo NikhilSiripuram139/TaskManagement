@@ -1,0 +1,49 @@
+<!-- <app-userdetails *ngIf="showdetails" 
+(onshowdetails)="onshowdetails($event)"
+[userdetails]="userdetails" ></app-userdetails> -->
+
+
+
+<div class="db-container">
+    <div class="inner-container">
+        <div class="header">
+            <h3>Dashboard</h3>
+            <div class="dashboard-menu">
+                <nav>
+                    <ul>
+                        <li><a (click)="onCreateTask()">Create Account</a></li>
+                        <li><a (click)="fetchTasksClicked()">Fetch Data</a></li>
+                        <!-- <li><a (click)="ondeleteallTasks()">Delete All</a></li> -->
+                    </ul>
+                </nav>
+            </div> 
+        </div>
+
+        <app-loader *ngIf="isloading"></app-loader>
+
+        <ng-container *ngIf="!isloading">
+            
+            <app-snackbar [errormessage]="errormessage" *ngIf="errormessage"></app-snackbar>
+
+            <div class="users-list" *ngIf="taskslist.length==0">
+                <h3 style="padding: 3vh 0vw 0vh 3vw;">No account has been created yet!</h3>
+            </div>
+    
+            <div class="users-list" *ngIf="taskslist.length>0">
+                <header>Users</header><br>
+                <div class="divider">
+                    <div class="details-container" *ngFor="let task of taskslist">
+                        <p><b>Title: </b>{{task.title}}</p>
+                        <p><b>Status: </b>{{task.status}}</p> 
+                        <p><b>Description: </b>{{task.description}}</p>
+            
+                        <button style="color: #ff5656;" (click)="onDeleteTask(task.id)" ><i class="fa-solid fa-trash"></i></button>
+                        <button style="color: white;" (click)="onEditTask(task.id)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button style="color: white;" routerLink="/Details"><i class="fa-solid fa-circle-info"></i></button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

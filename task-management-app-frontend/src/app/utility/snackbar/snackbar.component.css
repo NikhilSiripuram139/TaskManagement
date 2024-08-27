@@ -1,0 +1,30 @@
+.err-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errmsg-container{
+    min-width: 25vw;
+    min-height: 3vh;
+    text-align: center;
+    background-color: #bb2d2d;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    top: 15%;
+    left: 36.8vw;
+    z-index: 10px;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.6s;
+}
+
+@keyframes fadein {
+    from{top: 0; opacity: 0;}
+    to{top: 15%; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from{top: 15%; opacity: 1;}
+    to{top: 0; opacity: 0;}
+}

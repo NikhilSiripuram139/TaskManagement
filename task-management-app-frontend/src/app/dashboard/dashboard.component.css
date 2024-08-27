@@ -1,0 +1,127 @@
+.db-container {
+    width: 100vw;
+    /* height: 85vh; */
+    margin-top: 8vh;
+    background-color: #1d1c1c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    width: 90vw;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    /* height: 75vh; */
+    min-height: 76vh;
+}
+
+.header {
+    height: 6vh;
+    background-color: rgb(30, 66, 54);
+}
+
+.header h3 {
+    float: left;
+    margin-top: 1.5vh;
+    margin-left: 2vw;
+}
+
+.dashboard-menu {
+    float: right;
+    margin-top: 1.5vh;
+    margin-right: 2vw;
+}
+
+.dashboard-menu nav ul li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 2vw;
+    cursor: pointer;
+    color: white;
+}
+
+.dashboard-menu nav ul li:hover {
+    color: black;
+    text-shadow: 2px 5px 5px rgb(142, 139, 139);
+}
+
+.users-list {
+    width: 90vw;
+    /* height: 69vh; */
+    background-color: #ffffff3d;
+    padding-bottom: 3vh;
+}
+
+#deleteall {
+    width: 5vw;
+    height: 3vh;
+    border: transparent;
+    background-color: transparent;
+    color: white;
+    float: right;
+    margin-right: 3vw;
+    margin-top: 2vh;
+}
+
+#deleteall:hover {
+    color: black;
+    text-shadow: 2px 5px 5px rgb(142, 139, 139);
+}
+
+header {
+    float: left;
+    margin-top: 1.5vh;
+    margin-left: 2vw;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+}
+
+.divider {
+    width: 80vw;
+    margin-top: 3vh;
+    /* margin-bottom: 3vh; */
+    margin-left: 5vw;
+}
+
+.details-container {
+    width: 20vw;
+    min-height: 15vh;
+    margin: 3vh 2.5vw 1vh 2.5vw;
+    /* border: 1px solid black; */
+    border-top: 20px solid rgb(30, 66, 54);
+    border-radius: 5px;
+    padding: 1% 0 1% 1%;
+    background-color: #1d1c1c;
+    display: inline-block;
+    /* height: 3vh; */
+    /* display: flex; */
+    /* column-gap: 2%; */
+    /* text-align: center; */
+    /* justify-content: space-between; */
+    /* margin: 1% 5% 1% 5%; */
+}
+
+.details-container p{
+    margin-bottom: 1vh;
+}
+
+.details-container button {
+    margin-right: 12px;
+    margin-top: 15px;
+    float: right;
+    background-color: transparent;
+    border: transparent;
+    box-shadow: 1px 3px 4px black;
+}
+
+.details-container button i {
+    background-color: transparent;
+    /* color: white; */
+}
+
+.details-container button i:hover{
+    transform: scale(1.3);
+}

@@ -1,0 +1,17 @@
+<div class="header-container">
+    <div class="logo">
+        <p><b>UI</b><i>solutions</i></p>
+    </div>
+
+    <div class="menu">
+        <div *ngIf="isloged" >
+            <button (click)="logout()" routerLink="Log">Logout</button>
+            <button routerLink="Dashboard">Dashboard</button>
+        </div>
+        
+        <div *ngIf="!isloged">
+            <button routerLink="Log">Login</button>
+        </div>
+        
+    </div>
+</div>

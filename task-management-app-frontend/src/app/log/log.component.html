@@ -1,0 +1,31 @@
+<div class="log-container">
+    <div class="log-main">
+        <app-snackbar [errormessage]="errormessage" *ngIf="errormessage"></app-snackbar>
+        <app-loader *ngIf="isloading"></app-loader>        
+        <form class="login-form"  (ngSubmit)="onsubmit()" [formGroup]="signupinform">
+
+            <h2>{{loginmode? 'Login here' : 'Signup here'}}</h2>
+            
+            <a class="cancel" routerLink="/Home"><i class="fa-solid fa-xmark"></i></a>
+            
+            <div class="input-box">
+                <label for="username">Username:</label>
+                <input id="username" type="text" placeholder="Username" formControlName="username">
+            </div>
+
+            <div class="input-box">
+                <label for="pass">Password:</label>
+                <input id="pass" type="text" placeholder="Password" formControlName="password">
+            </div>
+
+            <button type="submit" class="log-btn" >{{loginmode? 'Log in' : 'Sign up'}}</button>
+
+            <div class="input-box">
+                <p>{{loginmode? 'Do not have account yet?' : 'Already have a account?'}} <a (click)="onchangemode()" style="color: #40f; cursor: pointer;">{{loginmode? 'Register Here' : 'Login Here'}}</a></p>
+            </div>
+
+        </form>
+        
+
+    </div>
+</div>

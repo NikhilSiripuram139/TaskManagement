@@ -1,0 +1,31 @@
+<div class="background"></div>
+<div class="ca-container">
+    <form class="form" (ngSubmit)="onformsubmit()" #registrationform="ngForm">
+        <button id="exit" routerLink="/Dashboard"><i class="fa-solid fa-xmark"></i></button>
+        <header>Create Task</header>
+
+        <div class="input-box">
+            <label for="title">Title</label>
+            <input type="text" placeholder="Title" id="title" name="title" #title="ngModel" [(ngModel)]="Title" required>
+            <span style="color: rgb(163, 0, 0);" *ngIf="title.invalid && title.touched">*username is required field</span>
+            <span *ngIf="title.valid && title.touched">You entered:{{Title}}</span>
+        </div>
+
+        <div class="input-box">
+            <label for="status">Status</label>
+            <input type="text" placeholder="Status" id="status" name="status" #status="ngModel" [(ngModel)]="Status" required>
+            <span style="color: rgb(163, 0, 0);" *ngIf="status.invalid && status.touched">*status is required field</span>
+            <span *ngIf="status.valid && status.touched">You entered:{{Status}}</span>
+        </div>
+        
+        <div class="input-box">
+            <label for="description">Description</label><br>
+            <textarea  placeholder="Description" id="description" name="description" #description="ngModel" [(ngModel)]="Description" required></textarea>
+            <span style="color: rgb(163, 0, 0);" *ngIf="description.invalid && description.touched">*description is required field</span>
+            <span *ngIf="description.valid && description.touched">You entered:{{Description}}</span>
+        </div>        
+
+        <button type="submit" value="Submit" id="submit" class="submit-btn">Save</button>
+    </form>
+
+</div>
